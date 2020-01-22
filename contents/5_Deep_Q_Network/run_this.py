@@ -1,5 +1,5 @@
 from maze_env import Maze
-from RL_brain import DeepQNetwork
+from RL_brain_tf2 import DeepQNetwork
 
 
 def run_maze():
@@ -20,7 +20,7 @@ def run_maze():
 
             RL.store_transition(observation, action, reward, observation_)
 
-            if (step > 200) and (step % 5 == 0):
+            if (step > 50) and (step % 5 == 0):
                 RL.learn()
 
             # swap observation
@@ -43,7 +43,7 @@ if __name__ == "__main__":
                       learning_rate=0.01,
                       reward_decay=0.9,
                       e_greedy=0.9,
-                      replace_target_iter=200,
+                      replace_target_iter=50,
                       memory_size=2000,
                       # output_graph=True
                       )

@@ -33,6 +33,15 @@ class DeepQNetwork:
             e_greedy_increment=None,
             output_graph=False,
     ):
+        '''
+        n_actions:4，动作数量(上下左右)
+        n_features:2，状态数量(x,y)
+        '''
+        print('n_actions:', n_actions)
+        print('n_features:', n_features)
+        print('learning_rate:', learning_rate)
+        print('reward_decay:', reward_decay)
+        print('e_greedy:', e_greedy)
         self.n_actions = n_actions
         self.n_features = n_features
         self.lr = learning_rate
